@@ -1,35 +1,39 @@
 # AWS Cloud Portfolio
 
-A structured portfolio of two hands-on AWS projects. Each project documents its architecture, implementation, verification steps, and operational considerations.
-
-> These projects document learning exercises completed in an AWS lab environment. This repository contains no credentials or configuration secrets and does not reproduce the original lab manuals.
+A collection of hands-on projects documenting practical work with AWS compute, networking, and storage. Each project has its own step-by-step guide, command explanations, and labeled screenshots.
 
 ## Projects
 
-| Project | Overview | Core services |
+| Project | What it covers | Main AWS services |
 | --- | --- | --- |
-| [01 — EC2 Web Server](./project-01-ec2-web-server/README.md) | Launch a Linux server, install Apache with User Data, allow HTTP traffic, monitor the instance, and resize its compute and storage | Amazon EC2, Amazon EBS, Security Groups |
-| [02 — EBS Snapshot and Restore](./project-02-ebs-snapshot-restore/README.md) | Create and attach a volume, format and mount it, create a snapshot, then restore a file from a new volume | Amazon EBS, Amazon EC2 |
+| [EC2](./EC2/README.md) | Launch an Amazon Linux instance, install Apache with User Data, allow HTTP, check health, and verify the site | Amazon EC2, Amazon EBS, Security Groups |
+| [EBS](./EBS/README.md) | Create and mount an EBS volume, write a test file, create a snapshot, and recover that file on a restored volume | Amazon EBS, Amazon EC2 |
 
-## Repository structure
+## Repository layout
 
 ```text
 Cloud/
 ├── README.md
-├── project-01-ec2-web-server/
-│   ├── README.md
-│   └── assets/
-└── project-02-ebs-snapshot-restore/
-    ├── README.md
-    └── assets/
+├── assets/                         # Supplementary reference diagrams
+├── EC2/                             # EC2 walkthrough and evidence
+└── EBS/                             # EBS walkthrough and evidence
 ```
 
-## Publishing notes
+## Reference architecture diagrams
 
-- The two projects are kept in separate folders with one portfolio overview at the root.
-- The EC2 screenshot omits the public IP and browser frame. Keep AWS account and resource identifiers, credentials, and personal contact details out of future commits.
-- The examples use small resources in a training environment. Review AWS costs and remove temporary resources after the exercises.
+These diagrams provide extra context for AWS networking and EC2 concepts. They are supporting references and are not presented as deployed architecture for the two lab projects above.
 
-## About
+The first diagram illustrates an EC2 web server protected by a security group inside an Availability Zone.
 
-These projects build foundational experience with AWS compute and block storage. The documentation presents the design, workflow, and verification results without copying the original lab instructions.
+![Reference diagram: EC2 IIS server and security group](./assets/reference-ec2-iis-architecture.png)
+
+The second diagram illustrates a VPC with public and private subnets, route tables, an Internet Gateway, and a NAT Gateway.
+
+![Reference diagram: VPC public and private network layout](./assets/reference-vpc-network-topology.png)
+
+## Notes
+
+- Project folders separate instructions, evidence, and project specific details.
+- Screenshots were prepared for a public portfolio; account identifiers and resource IDs are masked or cropped.
+- These are training projects. Review AWS costs and remove temporary resources after completing a lab.
+- Never commit credentials, private keys, account identifiers, or personal contact details.
