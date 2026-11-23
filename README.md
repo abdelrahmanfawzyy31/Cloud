@@ -1,39 +1,39 @@
-# AWS Cloud Portfolio
+# AWS Cloud Labs
 
-A collection of hands-on projects documenting practical work with AWS compute, networking, and storage. Each project has its own step-by-step guide, command explanations, and labeled screenshots.
+A step-by-step portfolio of hands-on AWS labs. Each project is organized in its own folder and includes concise command explanations, labeled screenshots, and the result of each workflow.
 
 ## Projects
 
-| Project | What it covers | Main AWS services |
+| Project | What you will build and practice | Main services |
 | --- | --- | --- |
-| [EC2](./EC2/README.md) | Launch an Amazon Linux instance, install Apache with User Data, allow HTTP, check health, and verify the site | Amazon EC2, Amazon EBS, Security Groups |
-| [EBS](./EBS/README.md) | Create and mount an EBS volume, write a test file, create a snapshot, and recover that file on a restored volume | Amazon EBS, Amazon EC2 |
+| [EC2](./EC2/README.md) | Launch a Linux web server, automate Apache setup, configure HTTP access, and verify instance health | EC2, EBS, Security Groups |
+| [EBS](./EBS/README.md) | Attach and mount a data volume, create a snapshot, and restore a deleted file | EBS, EC2, Linux |
 
-## Repository layout
+## Repository structure
 
 ```text
 Cloud/
 ├── README.md
-├── assets/                         # Supplementary reference diagrams
-├── EC2/                             # EC2 walkthrough and evidence
-└── EBS/                             # EBS walkthrough and evidence
+├── EC2/
+│   ├── README.md
+│   ├── user-data.sh
+│   └── images/
+└── EBS/
+    ├── README.md
+    ├── commands.sh
+    └── images/
 ```
 
-## Reference architecture diagrams
+## How to use this portfolio
 
-These diagrams provide extra context for AWS networking and EC2 concepts. They are supporting references and are not presented as deployed architecture for the two lab projects above.
-
-The first diagram illustrates an EC2 web server protected by a security group inside an Availability Zone.
-
-![Reference diagram: EC2 IIS server and security group](./assets/reference-ec2-iis-architecture.png)
-
-The second diagram illustrates a VPC with public and private subnets, route tables, an Internet Gateway, and a NAT Gateway.
-
-![Reference diagram: VPC public and private network layout](./assets/reference-vpc-network-topology.png)
+1. Open a project from the table above.
+2. Follow its numbered steps in order.
+3. Read the short explanation before running a command or reviewing a screenshot.
+4. Use the project summary and result section to review the lab outcome.
 
 ## Notes
 
-- Project folders separate instructions, evidence, and project specific details.
-- Screenshots were prepared for a public portfolio; account identifiers and resource IDs are masked or cropped.
-- These are training projects. Review AWS costs and remove temporary resources after completing a lab.
-- Never commit credentials, private keys, account identifiers, or personal contact details.
+- These are training labs, not production deployment templates.
+- Account identifiers, IP addresses, hostnames, and AWS resource IDs have been removed or concealed from the published evidence.
+- Review AWS charges and clean up temporary resources when using a personal account.
+- Never commit credentials, private keys, or access tokens.
