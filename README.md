@@ -27,7 +27,7 @@ Cloud/
 ## Publishing notes
 
 - The two projects are kept in separate folders with one portfolio overview at the root.
-- Review screenshots before making the repository public. Do not add public IP addresses, account or resource identifiers, or email addresses.
+- The EC2 screenshot omits the public IP and browser frame. Keep AWS account and resource identifiers, credentials, and personal contact details out of future commits.
 - The examples use small resources in a training environment. Review AWS costs and remove temporary resources after the exercises.
 
 ## About
